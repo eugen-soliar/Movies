@@ -76,7 +76,7 @@ UI, routes, features. One step at a time, no big-bang rewrite.
 | T11 | x      | Port `HomePage` page → Vue SFC; useState→ref, useEffect→onMounted/watch                                             | V1, V4, V5          |
 | T12 | x      | Port `MoviesPage` page → Vue SFC; URL query via `useRoute`; push via `useRouter`                                    | V1, V4, V5, V6      |
 | T13 | x      | Port `MovieDetailsPage` → Vue SFC; `useRoute().path` for sub-links; nested `<RouterView>`                           | V1, V4, V7, V8, V12 |
-| T14 | .      | Port `Cast` sub-page → Vue SFC                                                                                      | V1, V8              |
+| T14 | x      | Port `Cast` sub-page → Vue SFC                                                                                      | V1, V8              |
 | T15 | .      | Port `Reviews` sub-page → Vue SFC                                                                                   | V1, V8              |
 | T16 | .      | Replace react-loader-spinner with `defineAsyncComponent` + CSS spinner; update all usage                            | V4, V9, V10         |
 | T17 | .      | Smoke-test all routes; verify V1–V12; remove unused React deps from package.json                                    | V9                  |
