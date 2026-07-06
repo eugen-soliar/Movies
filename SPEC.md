@@ -54,8 +54,11 @@ UI, routes, features. One step at a time, no big-bang rewrite.
   containing async components; no bare dynamic import used as a component.
 - V11: `vue-router` pinned ≥ 4.1.0; navigation `state: { from: route }` verified
   — detail page "Return" lands on originating route, not always `/`.
-- V12: `MovieDetailsPage` sub-route links built using `useRoute().path`; Cast
-  and Reviews links resolve correctly under any `:movieId`.
+- V12: `MovieDetailsPage` Cast/Reviews links resolve correctly regardless of
+  which child route is currently active (cast→review and review→cast both work).
+- V13: `MovieDetailsPage` sub-route link paths use static base
+  `/movies/${route.params.movieId}`, NOT `route.path`; `route.path` mutates when
+  a child route is active, causing double-appended paths and catch-all redirect.
 
 ---
 
@@ -85,5 +88,7 @@ UI, routes, features. One step at a time, no big-bang rewrite.
 
 ## §B Bugs
 
-| id  | date | cause | fix |
-| --- | ---- | ----- | --- |
+| id  | date       | cause                                                                                                                                 | fix |
+| --- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| B1  | 2026-07-06 | MovieDetailsPage sub-links used `route.path`; on `/movies/123/cast` clicking Review gave `/movies/123/cast/reviews` → redirect to `/` | V13 |
+| B2  | 2026-07-06 | App.vue T3 stub never wired Container+Header; Header/Container absent from all pages                                                  | —   |
