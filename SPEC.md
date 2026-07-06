@@ -65,7 +65,7 @@ UI, routes, features. One step at a time, no big-bang rewrite.
 | --- | ------ | ------------------------------------------------------------------------------------------------------------------- | ------------------- |
 | T1  | x      | Scaffold Vite+Vue3 project; install vue-router v4 (≥4.1.0); delete CRA scripts                                      | I.build, V9, V11    |
 | T2  | x      | Wire vue-router config skeleton: all five routes, lazy imports, catch-all redirect                                  | V1, V4, V8, V10     |
-| T3  | .      | Port `App` root → Vue SFC + `main.js` entry (`createApp().use(router).mount()`); stub `<RouterView>` + `<Suspense>` | V1, V4, V9          |
+| T3  | x      | Port `App` root → Vue SFC + `main.js` entry (`createApp().use(router).mount()`); stub `<RouterView>` + `<Suspense>` | V1, V4, V9          |
 | T4  | .      | Port `src/index.css` + global styles; verify `modern-normalize` import                                              | V2                  |
 | T5  | .      | Port `services/fetchAPI.js` → plain JS module (no React dep); keep fn signatures                                    | I.api, V3           |
 | T6  | .      | Port `utils/genreFinder.js` + `utils/scrollDown.js` (no React dep)                                                  | —                   |

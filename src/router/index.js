@@ -1,8 +1,5 @@
-import {
-  createRouter,
-  createWebHistory,
-  defineAsyncComponent,
-} from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
+import { defineAsyncComponent } from 'vue';
 
 const HomePage = defineAsyncComponent(() =>
   import('../components/HomePage/HomePage.vue'),
