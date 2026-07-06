@@ -72,7 +72,7 @@ UI, routes, features. One step at a time, no big-bang rewrite.
 | T7  | x      | Port `Container` component → Vue SFC with CSS Module                                                                | V2, V9              |
 | T8  | x      | Port `Header` component → Vue SFC; use `<RouterLink>` active-class                                                  | V1, V2              |
 | T9  | x      | Port `LoadMore` component → Vue SFC; align PropTypes → fix declaration to `onClick`                                 | V2                  |
-| T10 | .      | Port `MoviesList` view → Vue SFC; pass `{ movies, genres }` as props; use `useRoute()` for back-state               | V2, V7, V11         |
+| T10 | x      | Port `MoviesList` view → Vue SFC; pass `{ movies, genres }` as props; use `useRoute()` for back-state               | V2, V7, V11         |
 | T11 | .      | Port `HomePage` page → Vue SFC; useState→ref, useEffect→onMounted/watch                                             | V1, V4, V5          |
 | T12 | .      | Port `MoviesPage` page → Vue SFC; URL query via `useRoute`; push via `useRouter`                                    | V1, V4, V5, V6      |
 | T13 | .      | Port `MovieDetailsPage` → Vue SFC; `useRoute().path` for sub-links; nested `<RouterView>`                           | V1, V4, V7, V8, V12 |
