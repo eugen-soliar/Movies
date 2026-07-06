@@ -53,13 +53,19 @@ const onReturn = () => {
     <div :class="$style.navLink">
       <RouterLink
         :class="$style.link"
-        :to="{ path: `${route.path}/cast`, state: route.state }"
+        :to="{
+          path: `/movies/${route.params.movieId}/cast`,
+          state: route.state,
+        }"
       >
         Cast
       </RouterLink>
       <RouterLink
         :class="$style.link"
-        :to="{ path: `${route.path}/reviews`, state: route.state }"
+        :to="{
+          path: `/movies/${route.params.movieId}/reviews`,
+          state: route.state,
+        }"
       >
         Review
       </RouterLink>

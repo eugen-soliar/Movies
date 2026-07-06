@@ -1,12 +1,20 @@
+<script setup>
+import Container from '../Container/Container.vue';
+import Header from '../Header/Header.vue';
+</script>
+
 <template>
-  <Suspense>
-    <RouterView />
-    <template #fallback>
-      <div :class="$style.loaderWrap">
-        <div :class="$style.spinner"></div>
-      </div>
-    </template>
-  </Suspense>
+  <Container>
+    <Header />
+    <Suspense>
+      <RouterView />
+      <template #fallback>
+        <div :class="$style.loaderWrap">
+          <div :class="$style.spinner"></div>
+        </div>
+      </template>
+    </Suspense>
+  </Container>
 </template>
 
 <style module>
