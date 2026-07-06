@@ -79,7 +79,7 @@ UI, routes, features. One step at a time, no big-bang rewrite.
 | T14 | x      | Port `Cast` sub-page → Vue SFC                                                                                      | V1, V8              |
 | T15 | x      | Port `Reviews` sub-page → Vue SFC                                                                                   | V1, V8              |
 | T16 | x      | Replace react-loader-spinner with `defineAsyncComponent` + CSS spinner; update all usage                            | V4, V9, V10         |
-| T17 | .      | Smoke-test all routes; verify V1–V12; remove unused React deps from package.json                                    | V9                  |
+| T17 | x      | Smoke-test all routes; verify V1–V12; remove unused React deps from package.json                                    | V9                  |
 
 ---
 

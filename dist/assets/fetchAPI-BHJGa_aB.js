@@ -1,0 +1,45 @@
+const r = '5a9486e7363af1432b87b7a7303a7852',
+  a = 'https://api.themoviedb.org',
+  c = n => {
+    const t = `${a}/3/trending/movie/day?api_key=${r}&page=${n}`;
+    return fetch(t).then(e => {
+      if (e.ok) return e.json();
+    });
+  },
+  u = () => {
+    const n = `${a}/3/genre/movie/list?api_key=${r}&language=en-US`;
+    return fetch(n)
+      .then(t => {
+        if (t.ok) return t.json();
+      })
+      .then(({ genres: t }) => t);
+  },
+  i = (n, t) => {
+    const e = `${a}/3/search/movie?api_key=${r}&language=en-US&query=${n}&page=${t}&include_adult=false`;
+    return fetch(e).then(o => {
+      if (o.ok) return o.json();
+    });
+  },
+  h = n => {
+    const t = `${a}/3/movie/${n}?api_key=${r}&language=en-US`;
+    return fetch(t).then(e => {
+      if (e.ok) return e.json();
+    });
+  },
+  s = n => {
+    const t = `${a}/3/movie/${n}/credits?api_key=${r}&language=en-US`;
+    return fetch(t)
+      .then(e => {
+        if (e.ok) return e.json();
+      })
+      .then(({ cast: e }) => e);
+  },
+  f = n => {
+    const t = `${a}/3/movie/${n}/reviews?api_key=${r}&language=en-US&page=1`;
+    return fetch(t)
+      .then(e => {
+        if (e.ok) return e.json();
+      })
+      .then(({ results: e }) => e);
+  };
+export { u as a, i as b, h as c, s as d, f as e, c as f };

@@ -1,0 +1,10 @@
+._section_zdnqv_1 {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  ._section_zdnqv_1 {
+    padding-top: 45px;
+    padding-bottom: 35px;
+  }
+}

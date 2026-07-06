@@ -1,0 +1,53 @@
+import {
+  e as c,
+  w as l,
+  a as e,
+  c as t,
+  F as i,
+  l as p,
+  r as _,
+  b as n,
+  t as o,
+} from './index-DXA6RC7-.js';
+import { e as m } from './fetchAPI-BHJGa_aB.js';
+const h = { key: 0 },
+  d = { key: 1 },
+  w = {
+    __name: 'Reviews',
+    setup(f) {
+      const u = c(),
+        a = _([]);
+      return (
+        l(
+          () => u.params.movieId,
+          async s => {
+            s && (a.value = await m(s));
+          },
+          { immediate: !0 },
+        ),
+        (s, y) =>
+          a.value.length > 0
+            ? (e(),
+              t('ul', h, [
+                (e(!0),
+                t(
+                  i,
+                  null,
+                  p(
+                    a.value,
+                    r => (
+                      e(),
+                      t('li', { key: r.author }, [
+                        n('p', null, o(r.author), 1),
+                        n('p', null, o(r.content), 1),
+                      ])
+                    ),
+                  ),
+                  128,
+                )),
+              ]))
+            : (e(), t('p', d, 'Sorry, no reviews given'))
+      );
+    },
+  };
+export { w as default };
