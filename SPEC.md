@@ -67,7 +67,7 @@ UI, routes, features. One step at a time, no big-bang rewrite.
 | T2  | x      | Wire vue-router config skeleton: all five routes, lazy imports, catch-all redirect                                  | V1, V4, V8, V10     |
 | T3  | x      | Port `App` root → Vue SFC + `main.js` entry (`createApp().use(router).mount()`); stub `<RouterView>` + `<Suspense>` | V1, V4, V9          |
 | T4  | x      | Port `src/index.css` + global styles; verify `modern-normalize` import                                              | V2                  |
-| T5  | .      | Port `services/fetchAPI.js` → plain JS module (no React dep); keep fn signatures                                    | I.api, V3           |
+| T5  | x      | Port `services/fetchAPI.js` → plain JS module (no React dep); keep fn signatures                                    | I.api, V3           |
 | T6  | .      | Port `utils/genreFinder.js` + `utils/scrollDown.js` (no React dep)                                                  | —                   |
 | T7  | .      | Port `Container` component → Vue SFC with CSS Module                                                                | V2, V9              |
 | T8  | .      | Port `Header` component → Vue SFC; use `<RouterLink>` active-class                                                  | V1, V2              |
